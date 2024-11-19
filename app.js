@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
     res.send('hello')
 })
 
+//registrazione del router
 app.use('/posts', postsRouter)
 
 

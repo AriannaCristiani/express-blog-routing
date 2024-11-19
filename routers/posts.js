@@ -1,9 +1,11 @@
 const express = require ('express')
+const posts = require ('../posts-array')
 const router = express.Router()
 
 //rotta index
 router.get('/', (req , res) =>{
-    res.send('questi sono i post')
+    //res.send('questi sono i post')
+    res.json (posts)
 })
 
 //rotta show: dinamica

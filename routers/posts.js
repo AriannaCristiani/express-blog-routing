@@ -11,7 +11,8 @@ router.get('/', (req , res) =>{
 //rotta show: dinamica
 router.get('/:id', (req, res) => {
     const id = req.params.id
-    res.send(`questo è il post con id: ${id}`)
+    //res.send(`questo è il post con id: ${id}`)
+    res.json (posts[`${id}`])
 })
 
 //rotta store

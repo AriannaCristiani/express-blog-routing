@@ -33,6 +33,20 @@ app.put('/posts/:id', (req, res) => {
     res.send(`stai aggiornando il post con id: ${id}`)
 })
 
+//rotta modify: dinamica
+app.patch('/posts/:id', (req, res) => {
+    const id = req.params.id
+    res.send(`stai modificando il post con id: ${id}`)
+})
+
+//rotta destroy: dinamica
+app.delete('/posts/:id', (req, res) => {
+    const id = req.params.id
+    res.send(`stai eliminando il post con id: ${id}`)
+})
+
+
+
 
 
 app.listen(port, () => {

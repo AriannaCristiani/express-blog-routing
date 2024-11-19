@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const postsRouter = require ('./routers/posts.js')
 const port = 3000
 const posts = require('./posts-array.js')
 
@@ -11,6 +12,7 @@ app.get('/', (req, res) => {
     res.send('hello')
 })
 
+app.use('/posts', postsRouter)
 
 
 app.listen(port, () => {

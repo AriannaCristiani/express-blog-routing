@@ -27,6 +27,13 @@ app.post('/posts', (req, res) => {
     res.send('stai creando un nuovo post')
 })
 
+//rotta update: dinamica
+app.put('/posts/:id', (req, res) => {
+    const id = req.params.id
+    res.send(`stai aggiornando il post con id: ${id}`)
+})
+
+
 
 app.listen(port, () => {
     console.log(`il server è in ascolto sulla porta: ${port}`)

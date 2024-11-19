@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const posts = require('./posts.js')
+const posts = require('./posts-array.js')
 
 
 app.use(express.static('public'))
@@ -10,42 +10,6 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.send('hello')
 })
-
-//rotta index
-app.get('/posts', (req , res) =>{
-    res.send('questi sono i post')
-})
-
-//rotta show: dinamica
-app.get('/posts/:id', (req, res) => {
-    const id = req.params.id
-    res.send(`questo è il post con id: ${id}`)
-})
-
-//rotta store
-app.post('/posts', (req, res) => {
-    res.send('stai creando un nuovo post')
-})
-
-//rotta update: dinamica
-app.put('/posts/:id', (req, res) => {
-    const id = req.params.id
-    res.send(`stai aggiornando il post con id: ${id}`)
-})
-
-//rotta modify: dinamica
-app.patch('/posts/:id', (req, res) => {
-    const id = req.params.id
-    res.send(`stai modificando il post con id: ${id}`)
-})
-
-//rotta destroy: dinamica
-app.delete('/posts/:id', (req, res) => {
-    const id = req.params.id
-    res.send(`stai eliminando il post con id: ${id}`)
-})
-
-
 
 
 

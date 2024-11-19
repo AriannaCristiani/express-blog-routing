@@ -22,6 +22,10 @@ app.get('/posts/:id', (req, res) => {
     res.send(`questo è il post con id: ${id}`)
 })
 
+//rotta store
+app.post('/posts', (req, res) => {
+    res.send('stai creando un nuovo post')
+})
 
 
 app.listen(port, () => {
